@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rock-paper-scissors</title>
+</head>
+<body>
+  <h1>ROCK PAPER SCISSORS</h1>
+  <button onclick="player.rock()">rock</button>
+  <button onclick="player.paper()">paper</button>
+  <button onclick="player.scissors()">scissors</button>
+  <button onclick="reset()">reset</button>
+
+  <script>
+
+    function computer(){
+      const cChosen = Math.random()
+
+      if(cChosen >= 0 && cChosen < 1/3){
+        return 'rock'
+      }
+      else if(cChosen >= 1/3 && cChosen < 1/3){
+        return 'paper'
+      }
+      else{
+        return 'scissors'
+      }
+
+    };
+
+
+    let player = {
+      rock: (rock) => {
+        const cChosen = computer(); 
+
+        if(cChosen === 'rock'){
+          count.tie++;
+          alert(`Your Chosen: rock\nComputer Chosen: ${cChosen}\nWin: ${count.win} Lost: ${count.lost} Tie: ${count.tie}`);
+        }
+        else if(cChosen === 'paper') {
+          count.lost++;
+          alert(`Your Chosen: rock\nComputer Chosen: ${cChosen}\nWin: ${count.win} Lost: ${count.lost} Tie: ${count.tie}`);
+        }
+        else{
+          count.win++;
+          alert(`Your Chosen: rock\nComputer Chosen: ${cChosen}\nWin: ${count.win} Lost: ${count.lost} Tie: ${count.tie}`);
+        }
+      },
+      paper: (paper) => {
+        const cChosen = computer(); 
+
+        if(cChosen === 'rock'){
+          count.win++;
+          alert(`Your Chosen: paper\nComputer Chosen: ${cChosen}\nWin: ${count.win} Lost: ${count.lost} Tie: ${count.tie}`);
+        }
+        else if(cChosen === 'paper') {
+          count.tie++;
+          alert(`Your Chosen: paper\nComputer Chosen: ${cChosen}\nWin: ${count.win} Lost: ${count.lost} Tie: ${count.tie}`);
+        }
+        else{
+          count.lost++;
+          alert(`Your Chosen: paper\nComputer Chosen: ${cChosen}\nWin: ${count.win} Lost: ${count.lost} Tie: ${count.tie}`);
+        }
+      },
+      scissors: (scissors) => {
+        const cChosen = computer(); 
+
+        if(cChosen === 'rock'){
+          count.lost++;
+          alert(`Your Chosen: scissors\nComputer Chosen: ${cChosen}\nWin: ${count.win} Lost: ${count.lost} Tie: ${count.tie}`);
+        }
+        else if(cChosen === 'paper') {
+          count.win++;
+          alert(`Your Chosen: scissors\nComputer Chosen: ${cChosen}\nWin: ${count.win} Lost: ${count.lost} Tie: ${count.tie}`);
+        }
+        else{
+          count.tie++;
+          alert(`Your Chosen: scissors\nComputer Chosen: ${cChosen}\nWin: ${count.win} Lost: ${count.lost} Tie: ${count.tie}`);
+        }
+      }
+    };
+
+    let count = {
+      win: 0,
+      lost: 0,
+      tie: 0
+    };
+
+    function reset(){
+      count.win = 0
+      count.lost = 0
+      count.tie = 0
+    };
+
+  </script>
+</body>
+</html>
