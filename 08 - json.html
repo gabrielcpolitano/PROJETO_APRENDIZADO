@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON</title>
+</head>
+<body>
+  <script>
+
+    const product = {
+      pen: 5,
+      shirt: 25
+    };
+
+    // JSON
+
+    const objToJson = (JSON.stringify(product));
+
+    const jsonToObj = (JSON.parse(objToJson));
+
+    console.log(jsonToObj.pen);
+
+    //LOCAL-STORAGE
+
+    const save = localStorage.setItem('name', 'gabriel');
+
+    console.log(localStorage.getItem('name'));
+    
+    //LOCAL-STORAGE to save Object
+
+    const saveObject = localStorage.setItem('count', JSON.stringify(product));
+
+    console.log(JSON.parse(localStorage.getItem('count')))
+  
+  </script>
+  
+</body>
+</html>
