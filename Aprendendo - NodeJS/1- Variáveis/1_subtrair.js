@@ -1,1 +1,5 @@
-console.log(5 - 7);
+function subtração(a, b){
+  console.log(a - b)
+}
+
+subtração(5, 2)

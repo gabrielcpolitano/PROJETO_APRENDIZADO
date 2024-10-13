@@ -1,1 +1,5 @@
-console.log(2*2)
+function multiplicação(a, b){
+  console.log(a * b)
+}
+
+multiplicação(2, 2);
