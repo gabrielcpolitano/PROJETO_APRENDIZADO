@@ -1,3 +1,5 @@
+// FUP DE MULTIPLICAÇÃO
+
 function multiplicação(a, b){
   console.log(a * b)
 }

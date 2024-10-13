@@ -1,3 +1,5 @@
+// FUP QUE O USUÁRIO COLOQUE O OPERADOR E DOIS NÚMEROS, PARA FAZER UMA OPEREÇÃO MATEMÁTICA.
+
 function calculadora(operação, número1, número2){
   if(typeof número1 !== 'number' || typeof número2 !== 'number'){
     console.log('Operador NÃO VÁLIDO')

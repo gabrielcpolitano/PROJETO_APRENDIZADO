@@ -1,3 +1,5 @@
+// FUP QUE CALCULE A MÉDIA ARITMÉTICA DE 3 NOTAS.
+
 function médiaAritmética(nota1, nota2, nota3){
   if(typeof nota1 !== 'number' || typeof nota2 !== 'number' || typeof nota3 !== 'number'){
     console.log('NOTA INVÁLIDA')

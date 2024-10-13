@@ -1,3 +1,5 @@
+// FUP MÉDIA DE 3 NÚMEROS
+
 function médiaDe3Números(a, b, c) {
   console.log((a + b +c) / 3)
 }
