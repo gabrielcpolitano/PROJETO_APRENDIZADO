@@ -1,4 +1,3 @@
-//desafio6.js
 // FUP que solicite três numero e verifique qual é o menor;
 
 function verificador(número1, número2, número3) {
