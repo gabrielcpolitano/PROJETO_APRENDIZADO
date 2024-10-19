@@ -21,3 +21,7 @@
 // mode -> modo
 
 // occurs -> ocorre
+
+// outlier -> valor atípico
+
+// means -> meios
